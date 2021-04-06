@@ -16,10 +16,43 @@
 
 #### 建立docker環境
 
+* 建立自訂 nginx、php image
+```shell
+# nginx 資料夾底下，建立 nginx image
+$ docker build -t my_nginx:v1
+
+# php-fpm 資料夾底下，建立 php image
+$ docker build -t my_php:v1
+```
+
+* 建立環境 container
+
+```shell
+# 根目錄下，用compose檔建立container們(nginx、php-fpm、phpmyadmin、db)
+$ docker-compose up
+```
+* docker-compose.yaml 部分備註
+```yaml
+  # db使用mysqle官方image，另外使用phpmyamin官方image檔建立db操作介面，其他設定參考官方
+  db:
+    image: mysql
+  phpmyadmin:
+    image: phpmyadmin
 
 
+  # nginx、php-fpm要mount到code資料夾
+  nginx:
+    volumes:
+      - ./code:/var/www/my-ele-project/html
+  php-fpm:
+    volumes:
+      - ./code:/var/www/my-ele-project/html
 
 
+  # 新增container network: mynet，讓container可以在內部互相溝通 
+  networks:
+    mynet:
+```
 
 #### 系統功能簡述
 
