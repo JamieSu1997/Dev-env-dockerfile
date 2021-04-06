@@ -54,9 +54,21 @@ $ docker-compose up
     mynet:
 ```
 
-#### 系統功能簡述
+<h4 id="2">系統功能簡述-(2018完成)</h4>
 
-
+* 首頁
+  ![home](code/jpg/home.png)
+  
+* 未登入功能-單一電器推薦(依照喜好品牌、容量等)
+  ![ele](code/jpg/ele-single.png)
+  
+* 登入功能-紀錄每月用電量(表單)
+  ![month](code/jpg/month-select.png)
+  
+* 圖表化-使用者用電量
+  ![chart1](code/jpg/pipe-chart.png)
+  ![chart2](code/jpg/op-chart.png)
+  ![chart3](code/jpg/chart3.png)
 
 
 
