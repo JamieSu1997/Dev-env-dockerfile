@@ -2,7 +2,7 @@
 
 #### 描述
 電費計算與電器推薦平台，Docker開發環境檔案(dockerfile,docker-compose)和程式碼。
-* [建立docker環境]()
+* [建立docker環境](#1)
 * [系統功能簡述]()
 
 #### 檔案目錄結構
@@ -14,7 +14,7 @@
   └── docker-compose.yaml  // 用image建立container們，包含 nginx、php、phpmyadmin、db(mysql)
 ```
 
-#### 建立docker環境
+<h4 id="1">建立docker環境</h4>
 
 * 建立自訂 nginx、php image
 ```shell
