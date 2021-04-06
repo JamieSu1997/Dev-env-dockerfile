@@ -22,7 +22,7 @@ services:
 
   nginx:
     container_name: nginx
-    image: nginx_test:02
+    image: my_nginx:v1
     restart: always
     volumes:
       - ./code:/var/www/my-ele-project/html
@@ -34,7 +34,7 @@ services:
 
   php-fpm:
     container_name: php-fpm
-    image: php:7.4-fpm
+    image: my_php:v1
     restart: always
     volumes:
       - ./code:/var/www/my-ele-project/html
